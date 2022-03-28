@@ -19,7 +19,7 @@
 ### Day 2 (Connect the API to the front-end, Establish MVP)
 - To lessen the load on the API, the app uses localStorage to save and access datasets. It only makes API calls when a new age/gender is selected. Any subsequent calls will first check to see if localStorage has the dataset.
 ### Day 3 (Design in Figma, Apply mobile styling, Testing)
-- It was mobile-first because of the nature of the app. It was a grading tool on-the-go
+- It has a mobile-first experience because of the nature of the app. It is a grading tool on-the-go!
 ### Day 4 (Apply desktop styling, Deployment)
 - Very minimal changes in styling compared to mobile
 - Deployed app at acftcalc.com
