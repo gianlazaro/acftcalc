@@ -23,3 +23,13 @@
 ### Day 4 (Apply desktop styling, Deployment)
 - Very minimal changes in styling compared to mobile
 - Deployed app at acftcalc.com
+
+## FAQS
+**Why are the scale steps random?**
+- The scale steps are not random. They were based on the 11-page PDF the Army provided linked here:  https://www.army.mil/e2/downloads/rv7/acft/ACFT_scoring_scales_220323.pdf
+
+**Is there a light mode?**
+- At the moment, it is the least of my priorities. Most ACFT tests are conducted in the early mornings.
+
+**My grade falls in between two steps?
+- Whichever time you fall closer to is your score. Otherwise, it is the discretion of the grader.
