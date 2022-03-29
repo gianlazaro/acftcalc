@@ -1,7 +1,7 @@
 # ACFTCalc
 *A calculator to calculate your Army ACFT scores for your upcoming diagnostic/record test.* 
 
-**Live link:** https://wwww.acftcalc.com
+**Live link:** https://www.acftcalc.com
 
 <img width="497" alt="Screen Shot 2022-03-27 at 9 45 22 PM" src="https://user-images.githubusercontent.com/77505021/160504176-b13adb52-a5f3-4934-9c7c-ad490d78903e.png">
 
