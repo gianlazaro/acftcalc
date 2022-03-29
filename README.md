@@ -31,5 +31,5 @@
 **Is there a light mode?**
 - At the moment, it is the least of my priorities. Most ACFT tests are conducted in the early mornings.
 
-**My grade falls in between two steps?
+**My grade falls in between two steps?**
 - Whichever time you fall closer to is your score. Otherwise, it is the discretion of the grader.
