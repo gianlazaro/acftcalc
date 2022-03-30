@@ -7,6 +7,7 @@ function Nav() {
       <ul>
         <li id="logo">
           <a href="#">ACFTCALC.COM 🏋️</a>
+          <span>(updated 23MAR22)</span>
         </li>
         <div>
           <li>
@@ -26,8 +27,6 @@ function Nav() {
 }
 
 const Wrapper = styled.nav`
-  color: orange;
-
   ul {
     list-style-type: none;
     margin: 0;
@@ -43,6 +42,11 @@ const Wrapper = styled.nav`
     font-weight: 800;
   }
 
+  #logo span {
+    display: block;
+    font-size: 0.75rem;
+    color: #bbb;
+  }
   ul > div {
     display: flex;
   }
