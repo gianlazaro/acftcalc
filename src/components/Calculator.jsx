@@ -3,7 +3,7 @@ import RadioButton from "./RadioButton";
 import React from "react";
 import axios from "axios";
 import Slider from "./Slider";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 function Calculator() {
   const [data, setData] = React.useState();

@@ -1,11 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App";
 import { createGlobalStyle } from "styled-components";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import BlogPost from "./components/BlogPost";
-import Calculator from "./components/Calculator";
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import Pages from "./components/Pages";
 const GlobalStyle = createGlobalStyle`
 #root {
   // COLORS
@@ -136,17 +134,15 @@ input[type="radio"]:checked + label {
 }
 
 `;
+const helmetContext = {};
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="/" element={<Calculator />} />
-          <Route path="/blog/:postId" element={<BlogPost />} />
-        </Route>
-      </Routes>
-    </Router>
+    <HelmetProvider context={helmetContext}>
+      <Router>
+        <Pages />
+      </Router>
+    </HelmetProvider>
     <GlobalStyle />
   </React.StrictMode>,
   document.getElementById("root")

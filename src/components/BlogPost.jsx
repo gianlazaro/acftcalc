@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { BlogPosts } from "./BlogPosts";
 import CallToActionButton from "./CallToActionButton";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 function BlogPost() {
   let { postId } = useParams();
