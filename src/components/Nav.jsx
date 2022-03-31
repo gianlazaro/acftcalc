@@ -13,12 +13,12 @@ function Nav() {
         <div>
           <li>
             <a href="mailto: hello@gianlazaro.com">
-              <Mail size={24} color="white" />
+              <Mail size={24} />
             </a>
           </li>
           <li>
             <a href="https://www.twitter.com/_gianlazaro">
-              <Info size={24} color="white" />
+              <Info size={24} />
             </a>
           </li>
         </div>
