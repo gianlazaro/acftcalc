@@ -18,6 +18,7 @@ function App() {
       <Outlet />
       <BottomSection>
         <Suspense fallback={<div>Loading...</div>}>
+          <div></div>
           <BlogWidget />
         </Suspense>
       </BottomSection>
