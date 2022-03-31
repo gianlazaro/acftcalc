@@ -36,6 +36,9 @@ body {
 a {
   color: var(--secondary-color)
 }
+a:hover {
+  color: #ddd;
+}
 
 input[type=range] {
   -webkit-appearance: none;

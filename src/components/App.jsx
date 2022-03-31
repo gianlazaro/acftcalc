@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Nav from "./Nav";
 import { Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-
+import Faqs from "./Faqs";
 const BlogWidget = React.lazy(() => import("./BlogWidget"));
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <Outlet />
       <BottomSection>
         <Suspense fallback={<div>Loading...</div>}>
-          <div></div>
+          <Faqs />
           <BlogWidget />
         </Suspense>
       </BottomSection>
@@ -48,8 +48,10 @@ const Footer = styled.footer`
 const BottomSection = styled.div`
   display: flex;
   flex-wrap: wrap;
+  gap: 25px;
   & div {
     flex: 1 0 300px;
+    height: 100%;
   }
 `;
 
