@@ -4,7 +4,6 @@ import Nav from "./Nav";
 import { Link, Outlet } from "react-router-dom";
 import { BlogPosts } from "./BlogPosts";
 import { useLocation, useParams } from "react-router-dom";
-
 function App() {
   let { postId } = useParams();
   const { pathname } = useLocation();

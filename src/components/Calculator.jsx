@@ -133,100 +133,90 @@ function Calculator() {
         />
         <label htmlFor="female">Female</label>
       </GenderWrapper>
-      <ExerciseWrapper>
-        {isLoading ? (
-          "Loading..."
-        ) : (
-          <Slider
-            data={data[0]}
-            exercise="mdl"
-            grade={grade}
-            setGrade={setGrade}
-            age={age}
-            sex={sex}
-            unit="LBS"
-          />
-        )}
-      </ExerciseWrapper>
-      <ExerciseWrapper>
-        {isLoading ? (
-          "Loading..."
-        ) : (
-          <Slider
-            data={data[1]}
-            exercise="spt"
-            grade={grade}
-            setGrade={setGrade}
-            age={age}
-            sex={sex}
-            unit="M"
-          />
-        )}
-      </ExerciseWrapper>
-      <ExerciseWrapper>
-        {isLoading ? (
-          "Loading..."
-        ) : (
-          <Slider
-            data={data[2]}
-            exercise="hrp"
-            grade={grade}
-            setGrade={setGrade}
-            age={age}
-            sex={sex}
-            unit="REPS"
-          />
-        )}
-      </ExerciseWrapper>
-      <ExerciseWrapper>
-        {isLoading ? (
-          "Loading..."
-        ) : (
-          <Slider
-            data={data[3]}
-            exercise="sdc"
-            grade={grade}
-            setGrade={setGrade}
-            age={age}
-            sex={sex}
-            unit="MINS"
-          />
-        )}
-      </ExerciseWrapper>
-      <ExerciseWrapper>
-        {isLoading ? (
-          "Loading..."
-        ) : (
-          <Slider
-            data={data[4]}
-            exercise="plk"
-            grade={grade}
-            setGrade={setGrade}
-            age={age}
-            sex={sex}
-            unit="MINS"
-          />
-        )}
-      </ExerciseWrapper>
-      <ExerciseWrapper>
-        {isLoading ? (
-          "Loading..."
-        ) : (
-          <Slider
-            data={data[5]}
-            exercise="2mr"
-            grade={grade}
-            setGrade={setGrade}
-            age={age}
-            sex={sex}
-            unit="MINS"
-          />
-        )}
-      </ExerciseWrapper>
-      <ScoreWrapper>
-        <span>Score</span>
-        {sumArr(Object.values(grade))}
-      </ScoreWrapper>
+      {isLoading ? (
+        <span
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <strong>Loading...</strong>
+        </span>
+      ) : (
+        <>
+          <ExerciseWrapper>
+            <Slider
+              data={data[0]}
+              exercise="mdl"
+              grade={grade}
+              setGrade={setGrade}
+              age={age}
+              sex={sex}
+              unit="LBS"
+            />
+          </ExerciseWrapper>
+          <ExerciseWrapper>
+            <Slider
+              data={data[1]}
+              exercise="spt"
+              grade={grade}
+              setGrade={setGrade}
+              age={age}
+              sex={sex}
+              unit="M"
+            />
+          </ExerciseWrapper>
+          <ExerciseWrapper>
+            <Slider
+              data={data[2]}
+              exercise="hrp"
+              grade={grade}
+              setGrade={setGrade}
+              age={age}
+              sex={sex}
+              unit="REPS"
+            />
+          </ExerciseWrapper>
+          <ExerciseWrapper>
+            <Slider
+              data={data[3]}
+              exercise="sdc"
+              grade={grade}
+              setGrade={setGrade}
+              age={age}
+              sex={sex}
+              unit="MINS"
+            />
+          </ExerciseWrapper>
+          <ExerciseWrapper>
+            <Slider
+              data={data[4]}
+              exercise="plk"
+              grade={grade}
+              setGrade={setGrade}
+              age={age}
+              sex={sex}
+              unit="MINS"
+            />
+          </ExerciseWrapper>
+          <ExerciseWrapper>
+            <Slider
+              data={data[5]}
+              exercise="2mr"
+              grade={grade}
+              setGrade={setGrade}
+              age={age}
+              sex={sex}
+              unit="MINS"
+            />
+          </ExerciseWrapper>
+
+          <ScoreWrapper>
+            <span>Score</span>
+            {sumArr(Object.values(grade))}
+          </ScoreWrapper>
+        </>
+      )}
     </>
   );
 }
