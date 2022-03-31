@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
 import { createGlobalStyle } from "styled-components";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import BlogPost from "./components/BlogPost";
+import Calculator from "./components/Calculator";
 
 const GlobalStyle = createGlobalStyle`
 #root {
@@ -9,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
   --primary-color: #5F2FEA;
   --secondary-color: #B0ACE0;
   --text-color: #E9E9E9;
+  
+  margin: 0 auto;
+  padding: 20px;
+  
 }
 
 * {
@@ -23,13 +30,12 @@ html, body {
   font-family: sans-serif;
 }
 
-#root {
-  display: flex;
-  justify-content: center;
-  flex: 1;
-}
 body {
-  background: #010101;
+  background: #191919;
+}
+
+a {
+  color: var(--secondary-color)
 }
 
 input[type=range] {
@@ -60,7 +66,7 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -12.6px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #222);
+  background: #222;
 }
 input[type=range]::-moz-range-track {
   width: 100%;
@@ -133,7 +139,14 @@ input[type="radio"]:checked + label {
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="/" element={<Calculator />} />
+          <Route path="/blog/:postId" element={<BlogPost />} />
+        </Route>
+      </Routes>
+    </Router>
     <GlobalStyle />
   </React.StrictMode>,
   document.getElementById("root")

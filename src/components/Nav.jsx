@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { Info, Mail } from "react-feather";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
     <Wrapper>
       <ul>
         <li id="logo">
-          <a href="#">ACFTCALC.COM 🏋️</a>
+          <Link to="/">ACFTCALC.COM 🏋️</Link>
           <span>(updated 23MAR22)</span>
         </li>
         <div>
@@ -30,7 +31,8 @@ const Wrapper = styled.nav`
   ul {
     list-style-type: none;
     margin: 0;
-    padding: 25px;
+    padding: 0px;
+    padding-bottom: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
