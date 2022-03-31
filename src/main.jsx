@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createGlobalStyle } from "styled-components";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Pages from "./components/Pages";
 const GlobalStyle = createGlobalStyle`
@@ -30,6 +30,7 @@ html, body {
 
 body {
   background: #191919;
+/* background: url('https://images.unsplash.com/photo-1604342427523-189b17048839?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1527&q=80') */
 }
 
 a {
