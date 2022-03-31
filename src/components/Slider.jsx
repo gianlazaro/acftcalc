@@ -10,7 +10,7 @@ function Slider({ data, grade, setGrade, age, exercise, sex, unit }) {
   React.useEffect(() => {
     setValue(0);
     setGrade({});
-    if (localStorage.getItem(`${sex}${age}_${exercise}`)) {
+    if (localStorage.getItem(`${sex}${age}_${exercise}`) !== null) {
       setExerciseData(
         JSON.parse(localStorage.getItem(`${sex}${age}_${exercise}`))
       );

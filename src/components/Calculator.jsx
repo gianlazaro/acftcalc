@@ -13,6 +13,7 @@ function Calculator() {
   const [grade, setGrade] = React.useState(0);
 
   React.useEffect(() => {
+    const snip = `${sex}${age}_range`;
     const fetchData = async () => {
       const { data } = await axios.get(
         `https://acft-api.herokuapp.com/ranges/${age}/${sex}`
@@ -22,9 +23,16 @@ function Calculator() {
         ranges.push(data[key].reverse());
       }
       setData(ranges);
+      localStorage.setItem(snip, JSON.stringify(ranges));
       setIsLoading(false);
     };
-    fetchData();
+    if (!localStorage.getItem(snip)) {
+      fetchData();
+    } else {
+      console.log(snip);
+      setData(JSON.parse(localStorage.getItem(snip)));
+      setIsLoading(false);
+    }
   }, [age, sex]);
 
   function sumArr(arr) {
