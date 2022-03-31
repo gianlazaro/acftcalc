@@ -32,7 +32,7 @@ function App() {
         <div></div>
         <BlogWidget>
           <h2 style={{ borderBottom: "1px solid #333", paddingBottom: "1rem" }}>
-            Blog Posts 📝
+            Blog Posts
           </h2>
           <ul>{blogTitles}</ul>
         </BlogWidget>
