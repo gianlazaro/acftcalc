@@ -138,9 +138,10 @@ function Calculator() {
           style={{
             display: "flex",
             justifyContent: "center",
+            minHeight: "964px",
           }}
         >
-          <strong>Loading...</strong>
+          Loading...
         </span>
       ) : (
         <>
