@@ -49,7 +49,7 @@ const Wrapper = styled.div`
   padding: 25px;
 
   & details {
-    padding: 10px;
+    padding: 10px 0;
     color: #ccc;
   }
 
